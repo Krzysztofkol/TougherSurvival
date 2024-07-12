@@ -1,8 +1,7 @@
-I have the following Minecraft 1.21 datapack that increases difficulty of Minecraft mobs. For now, it doubles the movement speed of all mobs:
-
 ### Folder Structure - folder inside of world/datapacks/
+
 ```
-TougherSurvival/
+tougher_survival/
 ├── readme.txt
 ├── pack.png
 ├── pack.mcmeta
@@ -14,7 +13,7 @@ TougherSurvival/
                 └── tick.json
     └── tougher_survival/
         └── functions/
-            ├── speed_increase.mcfunction
+            ├── enhance_mobs.mcfunction
             ├── tick.mcfunction
             └── load.mcfunction
 ```
@@ -35,44 +34,80 @@ TougherSurvival/
 ```
 tellraw @a {"text": "Fun!","color": "#ff00ff"}
 
-scoreboard objectives add base_speed dummy
-scoreboard players set #debug base_speed 1
-
 difficulty hard
 
 gamerule playersSleepingPercentage 101
 gamerule doInsomnia false
 gamerule blockExplosionDropDecay false
 gamerule mobExplosionDropDecay false
+gamerule doImmediateRespawn true
+gamerule disableElytraMovementCheck true
+gamerule maxEntityCramming 12
 gamerule randomTickSpeed 1
 
 tellraw @a {"text": "Tougher Survival Datapack Loaded!", "color": "#ff00ff"}
 ```
 
-#### `speed_increase.mcfunction` file:
+#### `enhance_mobs.mcfunction` file:
 
 ```
-# Debug message
-execute if score #debug base_speed matches 1 run tellraw @a {"text": "Speed increase function running","color": "yellow"}
+# Enhance all hostile mobs
 
-# Increase the movement speed of all mobs
+# zombies
 
-# Double movement speed for all mobs
-execute as @e[type=!player] store result score @s base_speed run attribute @s minecraft:generic.movement_speed get 10000
-execute as @e[type=!player,scores={base_speed=1..}] store result entity @s Attributes[{Name:"minecraft:generic.movement_speed"}].Base double 0.0002 run scoreboard players get @s base_speed
+# double the speed
+execute as @e[type=minecraft:zombie,tag=!enhanced_zombie] run attribute @s minecraft:generic.movement_speed base set 0.5
+# double the attack damage
+execute as @e[type=minecraft:zombie,tag=!enhanced_zombie] run attribute @s minecraft:generic.attack_damage base set 0.6
+# 50-block follow range
+execute as @e[type=minecraft:zombie,tag=!enhanced_zombie] run attribute @s minecraft:generic.follow_range base set 50.0
+# full armor
+execute as @e[type=minecraft:zombie,tag=!enhanced_zombie] run attribute @s minecraft:generic.armor base set 30.0
+# add tag
+execute run tag @e[type=minecraft:zombie, tag=!enhanced_zombie] add enhanced_zombie
 
-# Tag mobs that have been modified
-tag @e[type=!player,tag=!fast_mob] add fast_mob
+# skeletons
 
-# Debug message for modified mobs
-execute if score #debug base_speed matches 1 as @e[tag=fast_mob,limit=1] run tellraw @a {"text": "Mob speed modified","color": "green"}
+# double the speed
+execute as @e[type=minecraft:skeleton,tag=!enhanced_skeleton] run attribute @s minecraft:generic.movement_speed base set 0.5
+# 50-block follow range
+execute as @e[type=minecraft:skeleton,tag=!enhanced_skeleton] run attribute @s minecraft:generic.follow_range base set 50.0
+# full armor
+execute as @e[type=minecraft:skeleton,tag=!enhanced_skeleton] run attribute @s minecraft:generic.armor base set 30.0
+# add tag
+execute run tag @e[type=minecraft:skeleton, tag=!enhanced_skeleton] add enhanced_skeleton
+
+
+# creepers
+
+# double the speed
+execute as @e[type=minecraft:creeper,tag=!enhanced_creeper] run attribute @s minecraft:generic.movement_speed base set 0.5
+# 50-block follow range
+execute as @e[type=minecraft:creeper,tag=!enhanced_creeper] run attribute @s minecraft:generic.follow_range base set 50.0
+# full armor
+execute as @e[type=minecraft:creeper,tag=!enhanced_creeper] run attribute @s minecraft:generic.armor base set 30.0
+# add tag
+execute run tag @e[type=minecraft:creeper, tag=!enhanced_creeper] add enhanced_creeper
+
+# spiders
+
+# double the speed
+execute as @e[type=minecraft:spider,tag=!enhanced_spider] run attribute @s minecraft:generic.movement_speed base set 0.6
+# double the attack damage
+execute as @e[type=minecraft:spider,tag=!enhanced_spider] run attribute @s minecraft:generic.attack_damage base set 0.4
+# 50-block follow range
+execute as @e[type=minecraft:spider,tag=!enhanced_spider] run attribute @s minecraft:generic.follow_range base set 50.0
+# full armor
+execute as @e[type=minecraft:spider,tag=!enhanced_spider] run attribute @s minecraft:generic.armor base set 30.0
+# add tag
+execute run tag @e[type=minecraft:spider, tag=!enhanced_spider] add enhanced_spider
 ```
 
 #### `tick.mcfunction` file:
 
 ```
-# Run the speed increase function
-function tougher_survival:speed_increase
+# Run the mob enhancement function
+function tougher_survival:enhance_mobs
 ```
 
 #### `load.json` file:
@@ -94,37 +129,13 @@ function tougher_survival:speed_increase
     ]
 }
 ```
+#--------------------------------
 
-
-# -------------------------------------------------------------
-# creeper
-# default speed 0.25
-# execute at @a as @e[type=minecraft:creeper,distance=..16,tag=!fast_creeper] run attribute @s minecraft:generic.movement_speed base set 0.5
-# execute at @a run tag @e[type=minecraft:creeper,distance=..16,tag=!fast_creeper] add fast_creeper
-# ---
-# execute at @a as @e[type=!player,tag=!fast_mob] run attribute @s minecraft:generic.movement_speed base set 10 * minecraft:generic.movement_speed
-# execute at @a run tag @e[type=!player,tag=!fast_mob] add fast_mob
-# /summon zombie ~ ~ ~ {Attributes:[{Name:"generic.movement_speed", Base: 2 * generic.movement_speed}]}
-# /summon zombie ~ ~ ~ {attributes:[{id:"generic.movement_speed",base:0.46f}]}
-# /summon zombie ~ ~ ~ {attributes:[{id:"generic.movement_speed",base:0.5f}]}
-# /kill @e[type=!player]
+/summon zombie ~ ~ ~ {Attributes:[{Name:"generic.movement_speed", Base: 2 * generic.movement_speed}]}
+/summon zombie ~ ~ ~ {attributes:[{id:"generic.movement_speed",base:0.46f}]}
+/summon zombie ~ ~ ~ {attributes:[{id:"generic.movement_speed",base:0.5f}]}
+/kill @e[type=!player]
 # test functions
-#/function tougher_survival:tick
-#/function tougher_survival:load
-
-
+/function tougher_survival:tick
+/function tougher_survival:load
 /data get entity @e[type=zombie,limit=1,sort=nearest]
-
-# Creeper
-
-#execute as @e[type=minecraft:creeper,tag=!fast_creeper] run attribute @s minecraft:generic.movement_speed base set 0.5
-#execute run tag @e[type=minecraft:creeper, tag=!fast_creeper] add fast_creeper
-
-# Zombie
-
-#execute as @e[type=minecraft:zombie] run attribute @s minecraft:generic.movement_speed base set 0.5
-
-#execute as @e[type=minecraft:zombie,tag=!fast_zombie] run attribute @s minecraft:generic.movement_speed base set 0.5
-#execute run tag @e[type=minecraft:zombie,tag=!fast_zombie] add fast_zombie
-
-#/execute as @e[type=minecraft:zombie] run attribute @s minecraft:generic.movement_speed base set 0.5
