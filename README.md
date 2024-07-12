@@ -7,7 +7,7 @@ My idea is to increase the follow range to 50 blocks and base armor protection a
 I used implementation ideas from novomiracle's "minecraft but a bit harder" datapack: https://www.planetminecraft.com/data-pack/minecraft-but-a-bit-harder/
 
 Datapack folder structure:
-
+```
 TougherSurvival/tougher_survival/
 ├── readme.txt
 ├── pack.png
@@ -23,5 +23,6 @@ TougherSurvival/tougher_survival/
             ├── enhance_mobs.mcfunction
             ├── tick.mcfunction
             └── load.mcfunction
+```
 
 Installation - move the folder "tougher_survival" to "datapacks" folder of your Minecraft world and reload.
