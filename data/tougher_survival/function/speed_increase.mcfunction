@@ -139,3 +139,17 @@ execute as @e[type=minecraft:enderman,tag=!enhanced_enderman] run attribute @s m
 execute as @e[type=minecraft:enderman,tag=!enhanced_enderman] run attribute @s minecraft:generic.armor base set 30.0
 # add tag
 execute run tag @e[type=minecraft:enderman, tag=!enhanced_enderman] add enhanced_enderman
+
+# others
+
+# witch
+# double the speed
+execute as @e[type=minecraft:witch,tag=!enhanced_witch] run attribute @s minecraft:generic.movement_speed base set 0.5
+# increase the attack damage
+execute as @e[type=minecraft:witch,tag=!enhanced_witch] run attribute @s minecraft:generic.attack_damage base set 12.0
+# 64-block follow range
+execute as @e[type=minecraft:witch,tag=!enhanced_witch] run attribute @s minecraft:generic.follow_range base set 64.0
+# full armor
+execute as @e[type=minecraft:witch,tag=!enhanced_witch] run attribute @s minecraft:generic.armor base set 30.0
+# add tag
+execute run tag @e[type=minecraft:witch, tag=!enhanced_witch] add enhanced_witch
