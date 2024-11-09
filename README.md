@@ -21,7 +21,7 @@ TougherSurvival/tougher_survival/
                 └── tick.json
     └── tougher_survival/
         └── functions/
-            ├── enhance_mobs.mcfunction
+            ├── mob_enhancement.mcfunction
             ├── tick.mcfunction
             └── load.mcfunction
 ```
