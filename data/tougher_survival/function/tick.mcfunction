@@ -1,2 +1,2 @@
-# Run the speed increase function
-function tougher_survival:mob_enhancement
+# Run the mob enhancement function
+function tougher_survival:enhance_mobs
