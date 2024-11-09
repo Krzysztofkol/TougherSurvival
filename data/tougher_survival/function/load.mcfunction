@@ -1,4 +1,5 @@
 tellraw @a {"text": "Reloading Tougher Survival Datapack...","color": "#ff00ff"}
+tellraw @a {"text": "Last updated `load.mcfunction` on 2024.11.10 00:17","color": "#ff00ff"}
 
 scoreboard objectives add base_speed dummy
 scoreboard players set #debug base_speed 1

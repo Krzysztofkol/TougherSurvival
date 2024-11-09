@@ -1,8 +1,8 @@
 # Enhance all hostile mobs
 
-# zombies
+## Zombies
 
-# zombie
+### Zombie
 # double the speed
 execute as @e[type=minecraft:zombie,tag=!enhanced_zombie] run attribute @s minecraft:movement_speed base set 0.5
 # double the attack damage
@@ -11,10 +11,13 @@ execute as @e[type=minecraft:zombie,tag=!enhanced_zombie] run attribute @s minec
 execute as @e[type=minecraft:zombie,tag=!enhanced_zombie] run attribute @s minecraft:follow_range base set 64.0
 # slightly increase armor (armor defense points)
 execute as @e[type=minecraft:zombie,tag=!enhanced_zombie] run attribute @s minecraft:armor base set 4.0
+# increase armor toughness
+execute as @e[type=minecraft:zombie,tag=!enhanced_zombie] run attribute @s minecraft:armor_toughness base set 4.0
 # add tag
 execute run tag @e[type=minecraft:zombie, tag=!enhanced_zombie] add enhanced_zombie
 
-# husk
+### Husk
+# double the speed
 execute as @e[type=minecraft:husk,tag=!enhanced_husk] run attribute @s minecraft:movement_speed base set 0.5
 # double the attack damage
 execute as @e[type=minecraft:husk,tag=!enhanced_husk] run attribute @s minecraft:attack_damage base set 9.0
@@ -22,10 +25,12 @@ execute as @e[type=minecraft:husk,tag=!enhanced_husk] run attribute @s minecraft
 execute as @e[type=minecraft:husk,tag=!enhanced_husk] run attribute @s minecraft:follow_range base set 64.0
 # slightly increase armor (armor defense points)
 execute as @e[type=minecraft:husk,tag=!enhanced_husk] run attribute @s minecraft:armor base set 4.0
+# increase armor toughness
+execute as @e[type=minecraft:husk,tag=!enhanced_husk] run attribute @s minecraft:armor_toughness base set 4.0
 # add tag
 execute run tag @e[type=minecraft:husk, tag=!enhanced_husk] add enhanced_husk
 
-# drowned
+### Drowned
 # double the speed
 execute as @e[type=minecraft:drowned,tag=!enhanced_drowned] run attribute @s minecraft:movement_speed base set 0.5
 # double the attack damage
@@ -34,12 +39,14 @@ execute as @e[type=minecraft:drowned,tag=!enhanced_drowned] run attribute @s min
 execute as @e[type=minecraft:drowned,tag=!enhanced_drowned] run attribute @s minecraft:follow_range base set 64.0
 # slightly increase armor (armor defense points)
 execute as @e[type=minecraft:drowned,tag=!enhanced_drowned] run attribute @s minecraft:armor base set 4.0
+# increase armor toughness
+execute as @e[type=minecraft:drowned,tag=!enhanced_drowned] run attribute @s minecraft:armor_toughness base set 4.0
 # add tag
 execute run tag @e[type=minecraft:drowned, tag=!enhanced_drowned] add enhanced_drowned
 
-# skeletons
+## Skeletons
 
-# skeleton
+### Skeleton
 # double the speed
 execute as @e[type=minecraft:skeleton,tag=!enhanced_skeleton] run attribute @s minecraft:movement_speed base set 0.5
 # double the attack damage
@@ -48,10 +55,12 @@ execute as @e[type=minecraft:skeleton,tag=!enhanced_skeleton] run attribute @s m
 execute as @e[type=minecraft:skeleton,tag=!enhanced_skeleton] run attribute @s minecraft:follow_range base set 64.0
 # slightly increase armor (armor defense points)
 execute as @e[type=minecraft:skeleton,tag=!enhanced_skeleton] run attribute @s minecraft:armor base set 4.0
+# increase armor toughness
+execute as @e[type=minecraft:skeleton,tag=!enhanced_skeleton] run attribute @s minecraft:armor_toughness base set 4.0
 # add tag
 execute run tag @e[type=minecraft:skeleton, tag=!enhanced_skeleton] add enhanced_skeleton
 
-# stray
+### Stray
 # double the speed
 execute as @e[type=minecraft:stray,tag=!enhanced_stray] run attribute @s minecraft:movement_speed base set 0.5
 # double the attack damage
@@ -60,10 +69,12 @@ execute as @e[type=minecraft:stray,tag=!enhanced_stray] run attribute @s minecra
 execute as @e[type=minecraft:stray,tag=!enhanced_stray] run attribute @s minecraft:follow_range base set 64.0
 # slightly increase armor (armor defense points)
 execute as @e[type=minecraft:stray,tag=!enhanced_stray] run attribute @s minecraft:armor base set 4.0
+# increase armor toughness
+execute as @e[type=minecraft:stray,tag=!enhanced_stray] run attribute @s minecraft:armor_toughness base set 4.0
 # add tag
 execute run tag @e[type=minecraft:stray, tag=!enhanced_stray] add enhanced_stray
 
-# bogged
+### Bogged
 # double the speed
 execute as @e[type=minecraft:bogged,tag=!enhanced_bogged] run attribute @s minecraft:movement_speed base set 0.5
 # double the attack damage
@@ -72,10 +83,12 @@ execute as @e[type=minecraft:bogged,tag=!enhanced_bogged] run attribute @s minec
 execute as @e[type=minecraft:bogged,tag=!enhanced_bogged] run attribute @s minecraft:follow_range base set 64.0
 # slightly increase armor (armor defense points)
 execute as @e[type=minecraft:bogged,tag=!enhanced_bogged] run attribute @s minecraft:armor base set 4.0
+# increase armor toughness
+execute as @e[type=minecraft:bogged,tag=!enhanced_bogged] run attribute @s minecraft:armor_toughness base set 4.0
 # add tag
 execute run tag @e[type=minecraft:bogged, tag=!enhanced_bogged] add enhanced_bogged
 
-# wither skeleton
+### Wither Skeleton
 # increase the speed
 execute as @e[type=minecraft:wither_skeleton,tag=!enhanced_wither_skeleton] run attribute @s minecraft:movement_speed base set 0.7
 # double the attack damage
@@ -84,24 +97,28 @@ execute as @e[type=minecraft:wither_skeleton,tag=!enhanced_wither_skeleton] run 
 execute as @e[type=minecraft:wither_skeleton,tag=!enhanced_wither_skeleton] run attribute @s minecraft:follow_range base set 64.0
 # slightly increase armor (armor defense points)
 execute as @e[type=minecraft:wither_skeleton,tag=!enhanced_wither_skeleton] run attribute @s minecraft:armor base set 4.0
+# increase armor toughness
+execute as @e[type=minecraft:wither_skeleton,tag=!enhanced_wither_skeleton] run attribute @s minecraft:armor_toughness base set 4.0
 # add tag
 execute run tag @e[type=minecraft:wither_skeleton, tag=!enhanced_wither_skeleton] add enhanced_wither_skeleton
 
-# creepers
+## Creepers
 
-# creeper
+### Creeper
 # double the speed
 execute as @e[type=minecraft:creeper,tag=!enhanced_creeper] run attribute @s minecraft:movement_speed base set 0.5
 # 64-block follow range
 execute as @e[type=minecraft:creeper,tag=!enhanced_creeper] run attribute @s minecraft:follow_range base set 64.0
 # slightly increase armor (armor defense points)
 execute as @e[type=minecraft:creeper,tag=!enhanced_creeper] run attribute @s minecraft:armor base set 4.0
+# increase armor toughness
+execute as @e[type=minecraft:creeper,tag=!enhanced_creeper] run attribute @s minecraft:armor_toughness base set 4.0
 # add tag
 execute run tag @e[type=minecraft:creeper, tag=!enhanced_creeper] add enhanced_creeper
 
-# spiders
+## Spiders
 
-# spider
+### Spider
 # increase the speed
 execute as @e[type=minecraft:spider,tag=!enhanced_spider] run attribute @s minecraft:movement_speed base set 0.8
 # double the attack damage
@@ -110,10 +127,12 @@ execute as @e[type=minecraft:spider,tag=!enhanced_spider] run attribute @s minec
 execute as @e[type=minecraft:spider,tag=!enhanced_spider] run attribute @s minecraft:follow_range base set 64.0
 # slightly increase armor (armor defense points)
 execute as @e[type=minecraft:spider,tag=!enhanced_spider] run attribute @s minecraft:armor base set 4.0
+# increase armor toughness
+execute as @e[type=minecraft:spider,tag=!enhanced_spider] run attribute @s minecraft:armor_toughness base set 4.0
 # add tag
 execute run tag @e[type=minecraft:spider, tag=!enhanced_spider] add enhanced_spider
 
-# cave spider
+### Cave Spider
 # increase the speed
 execute as @e[type=minecraft:cave_spider,tag=!enhanced_cave_spider] run attribute @s minecraft:movement_speed base set 0.8
 # double the attack damage
@@ -122,12 +141,14 @@ execute as @e[type=minecraft:cave_spider,tag=!enhanced_cave_spider] run attribut
 execute as @e[type=minecraft:cave_spider,tag=!enhanced_cave_spider] run attribute @s minecraft:follow_range base set 64.0
 # slightly increase armor (armor defense points)
 execute as @e[type=minecraft:cave_spider,tag=!enhanced_cave_spider] run attribute @s minecraft:armor base set 4.0
+# increase armor toughness
+execute as @e[type=minecraft:cave_spider,tag=!enhanced_cave_spider] run attribute @s minecraft:armor_toughness base set 4.0
 # add tag
 execute run tag @e[type=minecraft:cave_spider, tag=!enhanced_cave_spider] add enhanced_cave_spider
 
-# endermen
+## Endermen
 
-# enderman
+### Enderman
 # double the speed
 execute as @e[type=minecraft:enderman,tag=!enhanced_enderman] run attribute @s minecraft:movement_speed base set 0.6
 # increase the attack damage
@@ -136,12 +157,14 @@ execute as @e[type=minecraft:enderman,tag=!enhanced_enderman] run attribute @s m
 execute as @e[type=minecraft:enderman,tag=!enhanced_enderman] run attribute @s minecraft:follow_range base set 64.0
 # slightly increase armor (armor defense points)
 execute as @e[type=minecraft:enderman,tag=!enhanced_enderman] run attribute @s minecraft:armor base set 4.0
+# increase armor toughness
+execute as @e[type=minecraft:enderman,tag=!enhanced_enderman] run attribute @s minecraft:armor_toughness base set 4.0
 # add tag
 execute run tag @e[type=minecraft:enderman, tag=!enhanced_enderman] add enhanced_enderman
 
-# others
+## Others
 
-# witch
+### Witch
 # double the speed
 execute as @e[type=minecraft:witch,tag=!enhanced_witch] run attribute @s minecraft:movement_speed base set 0.5
 # increase the attack damage
@@ -150,5 +173,7 @@ execute as @e[type=minecraft:witch,tag=!enhanced_witch] run attribute @s minecra
 execute as @e[type=minecraft:witch,tag=!enhanced_witch] run attribute @s minecraft:follow_range base set 64.0
 # slightly increase armor (armor defense points)
 execute as @e[type=minecraft:witch,tag=!enhanced_witch] run attribute @s minecraft:armor base set 4.0
+# increase armor toughness
+execute as @e[type=minecraft:witch,tag=!enhanced_witch] run attribute @s minecraft:armor_toughness base set 4.0
 # add tag
 execute run tag @e[type=minecraft:witch, tag=!enhanced_witch] add enhanced_witch
