@@ -32,6 +32,11 @@ TougherSurvival/tougher_survival/
 
 The installation: move the folder "tougher_survival" to "datapacks" folder of your Minecraft world and reload.
 
+## Future plans
+
+Wait for new attributes and include them. Consider enhancing the following mobs:
+- Ghast (especially armor and armor toughness)
+
 ## Commands useful for debugging
 
 ```
