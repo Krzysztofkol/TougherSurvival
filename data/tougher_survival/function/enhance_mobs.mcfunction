@@ -223,3 +223,91 @@ execute as @e[type=minecraft:witch,tag=!enhanced_witch] run attribute @s minecra
 execute as @e[type=minecraft:witch,tag=!enhanced_witch] run attribute @s minecraft:knockback_resistance base set 0.5
 # add tag
 execute run tag @e[type=minecraft:witch, tag=!enhanced_witch] add enhanced_witch
+
+### Hoglin
+# double the speed
+execute as @e[type=minecraft:hoglin,tag=!enhanced_hoglin] run attribute @s minecraft:movement_speed base set 0.6
+# increase the attack knockback
+execute as @e[type=minecraft:hoglin,tag=!enhanced_hoglin] run attribute @s minecraft:attack_knockback base set 1.5
+# 64-block follow range
+execute as @e[type=minecraft:hoglin,tag=!enhanced_hoglin] run attribute @s minecraft:follow_range base set 64.0
+# slightly increase armor (armor defense points)
+execute as @e[type=minecraft:hoglin,tag=!enhanced_hoglin] run attribute @s minecraft:armor base set 4.0
+# increase armor toughness
+execute as @e[type=minecraft:hoglin,tag=!enhanced_hoglin] run attribute @s minecraft:armor_toughness base set 4.0
+# increase knockback resistance
+execute as @e[type=minecraft:hoglin,tag=!enhanced_hoglin] run attribute @s minecraft:knockback_resistance base set 0.5
+# add tag
+execute run tag @e[type=minecraft:hoglin, tag=!enhanced_hoglin] add enhanced_hoglin
+
+### Piglin
+# double the speed
+execute as @e[type=minecraft:piglin,tag=!enhanced_piglin] run attribute @s minecraft:movement_speed base set 0.5
+# double the attack damage
+execute as @e[type=minecraft:piglin,tag=!enhanced_piglin] run attribute @s minecraft:attack_damage base set 4.0
+# increase the attack knockback
+execute as @e[type=minecraft:piglin,tag=!enhanced_piglin] run attribute @s minecraft:attack_knockback base set 0.5
+# 64-block follow range
+execute as @e[type=minecraft:piglin,tag=!enhanced_piglin] run attribute @s minecraft:follow_range base set 64.0
+# slightly increase armor (armor defense points)
+execute as @e[type=minecraft:piglin,tag=!enhanced_piglin] run attribute @s minecraft:armor base set 4.0
+# increase armor toughness
+execute as @e[type=minecraft:piglin,tag=!enhanced_piglin] run attribute @s minecraft:armor_toughness base set 4.0
+# increase knockback resistance
+execute as @e[type=minecraft:piglin,tag=!enhanced_piglin] run attribute @s minecraft:knockback_resistance base set 0.5
+# add tag
+execute run tag @e[type=minecraft:piglin, tag=!enhanced_piglin] add enhanced_piglin
+
+### Piglin Brute
+# double the speed
+execute as @e[type=minecraft:piglin_brute,tag=!enhanced_piglin_brute] run attribute @s minecraft:movement_speed base set 0.5
+# double the attack damage
+execute as @e[type=minecraft:piglin_brute,tag=!enhanced_piglin_brute] run attribute @s minecraft:attack_damage base set 4.0
+# increase the attack knockback
+execute as @e[type=minecraft:piglin_brute,tag=!enhanced_piglin_brute] run attribute @s minecraft:attack_knockback base set 0.5
+# 64-block follow range
+execute as @e[type=minecraft:piglin_brute,tag=!enhanced_piglin_brute] run attribute @s minecraft:follow_range base set 64.0
+# slightly increase armor (armor defense points)
+execute as @e[type=minecraft:piglin_brute,tag=!enhanced_piglin_brute] run attribute @s minecraft:armor base set 4.0
+# increase armor toughness
+execute as @e[type=minecraft:piglin_brute,tag=!enhanced_piglin_brute] run attribute @s minecraft:armor_toughness base set 4.0
+# increase knockback resistance
+execute as @e[type=minecraft:piglin_brute,tag=!enhanced_piglin_brute] run attribute @s minecraft:knockback_resistance base set 0.5
+# add tag
+execute run tag @e[type=minecraft:piglin_brute, tag=!enhanced_piglin_brute] add enhanced_piglin_brute
+
+### Silverfish
+# double the speed
+execute as @e[type=minecraft:silverfish,tag=!enhanced_silverfish] run attribute @s minecraft:movement_speed base set 0.5
+# double the attack damage
+execute as @e[type=minecraft:silverfish,tag=!enhanced_silverfish] run attribute @s minecraft:attack_damage base set 4.0
+# increase the attack knockback
+execute as @e[type=minecraft:silverfish,tag=!enhanced_silverfish] run attribute @s minecraft:attack_knockback base set 0.5
+# 64-block follow range
+execute as @e[type=minecraft:silverfish,tag=!enhanced_silverfish] run attribute @s minecraft:follow_range base set 64.0
+# slightly increase armor (armor defense points)
+execute as @e[type=minecraft:silverfish,tag=!enhanced_silverfish] run attribute @s minecraft:armor base set 4.0
+# increase armor toughness
+execute as @e[type=minecraft:silverfish,tag=!enhanced_silverfish] run attribute @s minecraft:armor_toughness base set 4.0
+# increase knockback resistance
+execute as @e[type=minecraft:silverfish,tag=!enhanced_silverfish] run attribute @s minecraft:knockback_resistance base set 0.5
+# add tag
+execute run tag @e[type=minecraft:silverfish, tag=!enhanced_silverfish] add enhanced_silverfish
+
+### Blaze
+# double the speed
+execute as @e[type=minecraft:blaze,tag=!enhanced_blaze] run attribute @s minecraft:movement_speed base set 0.5
+# double the attack damage
+execute as @e[type=minecraft:blaze,tag=!enhanced_blaze] run attribute @s minecraft:attack_damage base set 4.0
+# increase the attack knockback
+execute as @e[type=minecraft:blaze,tag=!enhanced_blaze] run attribute @s minecraft:attack_knockback base set 0.5
+# 64-block follow range
+execute as @e[type=minecraft:blaze,tag=!enhanced_blaze] run attribute @s minecraft:follow_range base set 64.0
+# slightly increase armor (armor defense points)
+execute as @e[type=minecraft:blaze,tag=!enhanced_blaze] run attribute @s minecraft:armor base set 4.0
+# increase armor toughness
+execute as @e[type=minecraft:blaze,tag=!enhanced_blaze] run attribute @s minecraft:armor_toughness base set 4.0
+# increase knockback resistance
+execute as @e[type=minecraft:blaze,tag=!enhanced_blaze] run attribute @s minecraft:knockback_resistance base set 0.5
+# add tag
+execute run tag @e[type=minecraft:blaze, tag=!enhanced_blaze] add enhanced_blaze
